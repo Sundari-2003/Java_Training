@@ -3,6 +3,8 @@ package com.sundari.ServletDemo;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -31,7 +33,7 @@ public class DemoSevlet extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 		 
-		PrintWriter out response.getWriter();
+		PrintWriter out = response.getWriter();
 		 
 		String name = request.getParameter("fname");
 		 
